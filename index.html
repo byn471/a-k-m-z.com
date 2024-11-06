@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sevgilime Özel</title>
+    <style>
+        /* Sayfa Arka Planı */
+        body {
+            font-family: Arial, sans-serif;
+            background: url('https://png.pngtree.com/thumb_back/fw800/background/20240127/pngtree-background-with-pink-and-brown-heart-pattern-image_15616215.jpg') no-repeat center center fixed;
+            background-size: cover;
+            color: #333;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .container {
+            max-width: 800px;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 10px;
+        }
+
+        /* GIF ve Küçük Fotoğraf Stili */
+        .gif {
+            width: 100%;
+            max-width: 300px;
+            height: auto;
+            margin: 20px 0;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .photo {
+            width: 100%;
+            max-width: 400px;
+            height: auto;
+            margin: 20px 0;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Şarkı Başlatma ve Durdurma Butonu */
+        .start-stop-song-btn {
+            background-color: #ff5e5e;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 18px;
+            border-radius: 20px;
+            cursor: pointer;
+            margin: 10px auto;
+            display: block;
+        }
+
+        .start-stop-song-btn:hover {
+            background-color: #e04c4c;
+        }
+
+        /* Animasyonlu Yazı Stili */
+        .text-below-photo {
+            font-size: 20px;
+            color: #555;
+            margin-top: 15px;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInUp 0.8s forwards;
+        }
+
+        .text-below-photo:nth-child(2) { animation-delay: 0.2s; }
+        .text-below-photo:nth-child(3) { animation-delay: 0.4s; }
+        .text-below-photo:nth-child(4) { animation-delay: 0.6s; }
+        .text-below-photo:nth-child(5) { animation-delay: 0.8s; }
+        .text-below-photo:nth-child(6) { animation-delay: 1.0s; }
+
+        /* Fade-in animasyonu */
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Yazma Efekti Animasyonu */
+        .typing-text {
+            font-size: 12px;
+            color: #555;
+            margin-top: 15px;
+            height: 30px;
+            overflow: hidden;
+            white-space: nowrap;
+            border-right: 3px solid;
+            animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
+        }
+
+        @keyframes typing {
+            from { width: 0; }
+            to { width: 100%; }
+        }
+
+        @keyframes blink-caret {
+            from, to { border-color: transparent; }
+            50% { border-color: black; }
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Giriş GIF -->
+        <img src="https://media.tenor.com/bM2ahcMULzQAAAAM/us.gif" alt="Giriş GIF" class="gif">
+
+        <!-- Kendi Kendine Yazılan Yazı -->
+        <div class="typing-text">"BU WEP SİTENİ SENİN İÇİN ÖZEL OLARAK HAZIRLADIM SEVGİLİM..."</div>
+
+        <!-- İkinci GIF -->
+        <img src="https://media.tenor.com/WKktFgwNn9gAAAAM/stan-twitter-kitty.gif" alt="İkinci GIF" class="gif">
+
+        <!-- Şarkıyı Başlat/Durdur Butonu -->
+        <button class="start-stop-song-btn" onclick="toggleSong()">Şarkıyı Başlat</button>
+
+        <!-- İlk Fotoğraf -->
+        <img src="C:\Users\1\Downloads\Aşkımsınn\foto\foto 1.jpg" alt="Fotoğraf" class="photo">
+        <div class="text-below-photo">"Sana olan sevgim her geçen gün daha da büyüyor..."</div>
+
+        <!-- Yeni Eklenen Fotoğraf -->
+        <img src="C:\Users\1\Downloads\Aşkımsınn\foto\WhatsApp Görsel 2024-11-06 saat 21.42.36_748c97b6-Photoroom.png" alt="Yeni Fotoğraf" class="photo">
+
+        <!-- Video Ekleme -->
+        <video width="50%" max-width="400" controls>
+            <source src="C:\Users\1\Downloads\Aşkımsınn\foto\video 1.mp4" type="video/mp4">
+            Tarayıcı videoyu desteklemiyor.
+        </video>
+
+        <!-- Video Altına Eklenen Fotoğraf -->
+        <img src="C:\Users\1\Downloads\Aşkımsınn\foto\foto 2.jpg" alt="Video Altındaki Fotoğraf" class="photo">
+
+        <!-- İkinci Fotoğraf Ekleniyor -->
+        <img src="C:\Users\1\Downloads\Aşkımsınn\foto\WhatsApp Görsel 2024-11-06 saat 21.42.35_ebf5b292-Photoroom.png" alt="İkinci Fotoğraf" class="photo">
+        <div class="text-below-photo">"Hayatımın en güzel anları seninle..."</div>
+
+        <!-- Üçüncü Fotoğraf Ekleniyor -->
+        <img src="C:\Users\1\Downloads\Aşkımsınn\foto\foto 3.jpg" alt="Üçüncü Fotoğraf" class="photo">
+
+        <!-- Dördüncü Fotoğraf Ekleniyor -->
+        <img src="C:\Users\1\Downloads\Aşkımsınn\foto\arka 2-Photoroom.png" alt="Dördüncü Fotoğraf" class="photo">
+        <div class="text-below-photo">"Sen benim en değerlimsin..."</div>
+
+        <!-- Beşinci Fotoğraf Ekleniyor -->
+        <img src="C:\Users\1\Downloads\Aşkımsınn\foto\foto 4.jpg" alt="Beşinci Fotoğraf" class="photo">
+
+        <!-- Altıncı Fotoğraf Ekleniyor -->
+        <img src="C:\Users\1\Downloads\Aşkımsınn\foto\arka 3.jpg" alt="Altıncı Fotoğraf" class="photo">
+        <div class="text-below-photo">"Seni her gün daha çok seviyorum..."</div>
+    </div>
+
+    <!-- Şarkıyı Başlatma/Durdurma Fonksiyonu -->
+    <audio id="romanticSong" src="C:\Users\1\Downloads\Aşkımsınn\mp3\Dolu Kadehi Ters Tut - Dilerim Ki Lyrics (Sözleri).mp3"></audio>
+    <script>
+        let isPlaying = false;
+
+        function toggleSong() {
+            var song = document.getElementById("romanticSong");
+
+            if (!isPlaying) {
+                song.play();
+                document.querySelector(".start-stop-song-btn").textContent = "Şarkıyı Durdur";
+            } else {
+                song.pause();
+                document.querySelector(".start-stop-song-btn").textContent = "Şarkıyı Başlat";
+            }
+
+            isPlaying = !isPlaying;
+        }
+    </script>
+</body>
+</html>
+<!-- Kalp Atışı Mesajı -->
+<h1 style="font-size: 36px; color: #ff5e5e;">Kalbim hep senin için atıyor canım sevgilim😌 </h1>
+<img src="https://media.tenor.com/92OEc0f_qa8AAAAj/heart-beat-red-heart.gif" alt="Kalp GIF" class="gif"> <!-- Buraya GIF dosya adını ekleyin -->
